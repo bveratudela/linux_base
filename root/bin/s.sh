@@ -2,4 +2,4 @@
 
 HOST=$1
 
-ssh root@nuc0${HOST}
+ssh ${USER}@${HOST}

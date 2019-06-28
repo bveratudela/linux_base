@@ -4,8 +4,8 @@ FILE=$1
 USER=root
 PATH=$2
 
-for i in 1 2 3 4
+for i in $(cat hosts.txt)
 do
-    echo "########## nuc0${i} ##########"
-    /usr/bin/scp ${FILE} ${USER}@nuc0${i}:${PATH}
+    echo "########## ${i} ##########"
+    /usr/bin/scp ${FILE} ${USER}@${i}:${PATH}
 done

@@ -1,10 +1,9 @@
 #!/bin/sh
 
-CMD=$@
-USER=root
-
-for i in 1 2 3 4
+for i in $(cat hosts.txt)
 do
-    echo "########## nuc0${i} ##########"
-    ssh ${USER}@nuc0${i} "${CMD}"
+    echo "########## ${i} ##########"
+    ssh -o StrictHostKeyChecking=no -t ${USER}@${i} bash -c "'
+        $@
+    '"
 done

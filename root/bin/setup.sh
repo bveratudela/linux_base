@@ -2,6 +2,7 @@
 
 DEV=/dev/sda1
 MNT=/data
+PASS=$(cat password.txt)
 
 for i in $(cat hosts.txt)
 do
@@ -19,5 +20,10 @@ do
 
         mkdir ${MNT}
         mount ${MNT}
+
+        #### mount shared media disk
+        mkdir /media
+        mount.cifs -o username=bveratudela,password=${PASS} //vbox/Media /media
+
     '"
 done

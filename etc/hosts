@@ -1,0 +1,7 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.7.30  vbox.kriqt.com vbox
+192.168.7.111 node-01.kriqt.com node-01 node01 nuc01
+192.168.7.112 node-02.kriqt.com node-02 node02 nuc02
+192.168.7.113 node-03.kriqt.com node-03 node03 nuc03
+192.168.7.114 node-04.kriqt.com node-04 node04 nuc04
